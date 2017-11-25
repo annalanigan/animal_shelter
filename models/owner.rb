@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner')
+require_relative('animal')
 
 class Owner
 
@@ -25,6 +26,16 @@ class Owner
           ($1, $2, $3, TRUE)'
     values = [@name, @address, @phone_number]
     result = SqlRunner.run(sql,values)
+  end
+
+  #SHOW ALL
+  def self.all
+    # write Sql - SELECT owners.*, animal.name
+                # FROM owners, animals
+                # WHERE  owners.id = animals.owner_id;
+    # add values
+    # run SqlRunner = returns an array of objects?
+    # map those and .new to display?
   end
 
 end

@@ -66,7 +66,7 @@ class Animal
   end
 
   #ASSIGN NEW OWNER / UPDATE
-  def adopt(owner_id)
+  def update
     sql = "UPDATE animals
           SET
           ( name,

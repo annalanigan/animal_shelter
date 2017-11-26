@@ -1,1 +1,52 @@
-<p>EDIT PAGE</p>
+<img src="<%= @animal.image %>" alt="Image of <%= @animal.name %>">
+
+<form action="/animals/<%= @animal.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+  <div class="form-group">
+    <label for="animal-name">Name:</label>
+    <div class="form-item">
+      <input type="text" name="name" value="<%= @animal.name %>"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="animal-type">Type:</label>
+    <div class="form-item">
+      <input type="text" name="type" value="<%= @animal.type %>"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="animal-breed">Breed:</label>
+    <div class="form-item">
+      <input type="text" name="breed" value="<%= @animal.breed %>"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="animal-health">Health Check:</label>
+    <div class="form-item">
+      <input type="radio" name="health_check" value="<%= @animal.health_check %>" checked if "<%= @animal.health_check == true  %>">Yes</br>
+      <input type="radio" name="health_check" value="<%= @animal.health_check %>" checked if "<%= @animal.health_check == false  %>">No</br>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="animal-behaviour">Behaviour Check:</label>
+    <div class="form-item">
+      <input type="radio" name="behaviour_check" value="<%= @animal.behaviour_check %>" checked if "<%= @animal.behaviour_check == true  %>">Yes</br>
+      <input type="radio" name="behaviour_check" value="<%= @animal.behaviour_check %>" checked if "<%= @animal.behaviour_check != true  %>">No</br>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="admission-date">Admitted:</label>
+    <div class="form-item">
+      <input type="text" name="admission_date" value="<%= @animal.admission_date %>"/>
+    </div>
+  </div>
+
+  <button class="button big-button">Update</button>
+
+</form>

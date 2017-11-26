@@ -17,9 +17,14 @@ get '/animal/:id' do
   erb ( :animals )
 end
 
-# to update owner to animals
+# to update animals
 get '/animal/:id/edit' do
   @animal = Animal.find(params[:id])
   @owners = Owner.all
   erb (:edit)
+end
+
+put '/animals/:id' do # update
+  Animal.new( params ).update
+  redirect to '/'
 end

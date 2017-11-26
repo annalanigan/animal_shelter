@@ -52,8 +52,12 @@ class Animal
   end
 
   #CHECK IF ADOPTABLE
-  def adoptable
-    @health_check && @behaviour_check
+  def adoptable?
+    if @health_check && @behaviour_check
+      "AVAILABLE"
+    else
+      'Not Yet Available'
+    end
   end
 
   #SET TO ADOPTABLE?? should this be here or withn the views?

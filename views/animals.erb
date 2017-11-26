@@ -1,0 +1,18 @@
+<img src="<%= @animal.image %>" alt="photo of <%= @animal.name %>">
+<p>Name: <%= @animal.name %></p>
+<p>Type: <%= @animal.type.capitalize %></p>
+<p>Breed: <%= @animal.breed.capitalize %></p>
+<p>Health check complete:
+  <% if @animal.health_check == true %>YES
+  <% else %>NO
+  <% end %>
+</p>
+<p>Behaviour check complete:
+  <% if @animal.behaviour_check == true %>YES
+  <% else %>NO
+  <% end %>
+</p>
+<p>Admission Date: <%= @animal.admission_date %></p>
+
+
+<p><a href="/animal/<%= @animal.id %>/edit">Edit Details</a></p>

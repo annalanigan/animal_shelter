@@ -1,0 +1,19 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Animal</th>
+    <th>Breed</th>
+    <th>Admission Date</th>
+    <th>Ready for Adoption</th>
+  </tr>
+
+  <% @animals.each do |animal| %>
+    <tr>
+      <td><a href="/animal/<%= animal.id %>" ><%= animal.name %></a></td>
+      <td><%= animal.type %></td>
+      <td><%= animal.breed %> </td>
+      <td><%= animal.admission_date %></td>
+      <td><%= animal.adoptable? %></td>
+    </tr>
+  <% end %>
+</table>

@@ -28,6 +28,11 @@ class Owner
     result = SqlRunner.run(sql,values)
   end
 
+  def self.all
+    sql = 'SELECT * FROM owners'
+    result = SqlRunner.run(sql)
+  end
+
   #SHOW ALL
   def self.animals
     sql = 'SELECT owners.name, animals.name, animals.type

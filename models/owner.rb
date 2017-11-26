@@ -29,12 +29,11 @@ class Owner
   end
 
   #SHOW ALL
-  def self.all
-    # write Sql - SELECT owners.*, animal.name
-                # FROM owners, animals
-                # WHERE  owners.id = animals.owner_id;
-    # add values
-    # run SqlRunner = returns an array of objects?
+  def self.animals
+    sql = 'SELECT owners.name, animals.name, animals.type
+          FROM owners, animals
+          WHERE  owners.id = animals.owners_id'
+    result = SqlRunner.run(sql, values) #= returns an array of objects?
     # map those and .new to display?
   end
 

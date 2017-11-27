@@ -14,17 +14,28 @@ end
 # to see details of an individual animals
 get '/animal/:id' do
   @animal = Animal.find(params[:id])
-  erb ( :animals )
+  erb ( :show )
 end
 
 # to update animals
 get '/animal/:id/edit' do
   @animal = Animal.find(params[:id])
   @owners = Owner.all
-  erb (:edit)
+  erb ( :edit )
 end
 
 put '/animals/:id' do # update
   Animal.new( params ).update
   redirect to '/'
+end
+
+get '/owners' do
+  @owners = Owner.all
+  erb( :owners )
+end
+
+get '/adopt_me/:id' do
+  @animal = Animal.find(params[:id])
+  @owners = Owner.all
+  erb ( :adopt )
 end

@@ -1,0 +1,25 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Contact Number</th>
+    <th>Home Check</th>
+    <th>Adopted Animal</th>
+  </tr>
+
+  <% @owners.each do |owner| %>
+    <tr>
+      <td><%= owner.name %></td>
+      <td><%= owner.address %></td>
+      <td><%= owner.phone_number %></td>
+      <td>
+      <% if owner.home_check == true %>
+      Passed
+      <% else %>
+      In Progress
+      <% end %>
+      </td>
+      <td>to be updated...</td>
+    </tr>
+  <% end %>
+</table>

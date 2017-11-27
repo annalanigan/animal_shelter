@@ -1,4 +1,4 @@
-<img src="<%= @animal.image %>" alt="Image of <%= @animal.name %>">
+<img class="solo-photo" src="/images/<%= @animal.image %>" alt="Image of <%= @animal.name %>">
 
 <form action="/animals/<%= @animal.id %>" method="post">
   <input type="hidden" name="_method" value="put">
@@ -27,16 +27,16 @@
   <div class="form-group">
     <label for="animal-health">Health Check:</label>
     <div class="form-item">
-      <input type="radio" name="health_check" value="<%= @animal.health_check %>" checked if "<%= @animal.health_check == true  %>">Yes</br>
-      <input type="radio" name="health_check" value="<%= @animal.health_check %>" checked if "<%= @animal.health_check == false  %>">No</br>
+      <input type="radio" name="health_check" value=TRUE <%= "checked" if @animal.health_check == 't' %>>Yes</br>
+      <input type="radio" name="health_check" value=FALSE <%= "checked" if @animal.health_check != 't' %>>No</br>
     </div>
   </div>
 
   <div class="form-group">
     <label for="animal-behaviour">Behaviour Check:</label>
     <div class="form-item">
-      <input type="radio" name="behaviour_check" value="<%= @animal.behaviour_check %>" checked if "<%= @animal.behaviour_check == true  %>">Yes</br>
-      <input type="radio" name="behaviour_check" value="<%= @animal.behaviour_check %>" checked if "<%= @animal.behaviour_check != true  %>">No</br>
+      <input type="radio" name="behaviour_check" value=TRUE <%= "checked" if @animal.behaviour_check == 't' %>>Yes</br>
+      <input type="radio" name="behaviour_check" value=FALSE <%= "checked" if @animal.behaviour_check != 't' %>>No</br>
     </div>
   </div>
 
@@ -44,6 +44,13 @@
     <label for="admission-date">Admitted:</label>
     <div class="form-item">
       <input type="text" name="admission_date" value="<%= @animal.admission_date %>"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="Image">Image:</label>
+    <div class="form-item">
+      <input type="text" name="image" value="<%= @animal.image %>"/>
     </div>
   </div>
 

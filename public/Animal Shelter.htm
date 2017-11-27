@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://localhost:4567/animal/1/edit -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Animal Shelter</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="http://localhost:4567/owners">Owners</a></li>
+      </ul>
+    </nav>
+    <section>
+      <h1>Anna's Animal Shelter</h1>
+    </section>
+    <section>
+      <img src="./Animal Shelter_files/saved_resource" alt="Image of Poppy">
+
+<form action="http://localhost:4567/animals/1" method="post">
+  <input type="hidden" name="_method" value="put">
+
+  <div class="form-group">
+    <label for="animal-name">Name:</label>
+    <div class="form-item">
+      <input type="text" name="name" value="Poppy">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="animal-type">Type:</label>
+    <div class="form-item">
+      <input type="text" name="type" value="dog">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="animal-breed">Breed:</label>
+    <div class="form-item">
+      <input type="text" name="breed" value="Springer Spaniel">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="animal-health">Health Check:</label>
+    <div class="form-item">
+      <input type="radio" name="health_check" value="f" checked="" if="" "false"="">Yes<br>
+      <input type="radio" name="health_check" value="f" checked="" if="" "false"="">No<br>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="animal-behaviour">Behaviour Check:</label>
+    <div class="form-item">
+      <input type="radio" name="behaviour_check" value="t" checked="">Yes<br>
+      <input type="radio" name="behaviour_check" value="t" checked="checked">No<br>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="admission-date">Admitted:</label>
+    <div class="form-item">
+      <input type="text" name="admission_date" value="17/10/2017">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="image">Photo:</label>
+    <div class="form-item">
+    <input type="file" name="image" value="">
+  </div>
+  </div>
+
+  <button class="button big-button">Update</button>
+
+</form>
+
+      <br>
+    </section>
+    <footer>Thank You</footer>
+  
+
+</body></html>

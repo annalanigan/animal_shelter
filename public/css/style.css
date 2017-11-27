@@ -1,0 +1,17 @@
+html {
+  background-color: teal;
+  text-align: center
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0
+}
+
+table {
+  display: inline-table;
+}
+
+.solo-photo {
+  max-width: 400px
+}

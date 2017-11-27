@@ -3,8 +3,7 @@ require_relative('animal')
 
 class Owner
 
-  attr_reader :id, :name, :address, :phone_number
-  attr_accessor :home_check
+  attr_accessor :home_check, :id, :name, :address, :phone_number
 
   def initialize(options)
     @id = options['id'] if options['id']
@@ -31,11 +30,12 @@ class Owner
   def self.all
     sql = 'SELECT * FROM owners'
     result = SqlRunner.run(sql)
+    result.map { |owner| Owner.new(owner) }
   end
 
   #SHOW ALL
   def self.animals
-    sql = 'SELECT owners.name, animals.name, animals.type
+    sql = 'SELECT owners.*, animals.name, animals.type
           FROM owners, animals
           WHERE  owners.id = animals.owners_id'
     result = SqlRunner.run(sql, values) #= returns an array of objects?

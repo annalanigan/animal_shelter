@@ -3,18 +3,17 @@ require_relative('owner')
 
 class Animal
 
-  attr_reader :id, :name, :type, :admission_date, :breed
-  attr_accessor :health_check, :behaviour_check, :owner_id, :image
+  attr_accessor :health_check, :behaviour_check, :owner_id, :image, :id, :name, :type, :admission_date, :breed
 
   def initialize(options)
-    @id = options['id'] if options['id']
+    @id = options['id'].to_i if options['id']
     @name = options['name']
     @type = options['type']
     @breed = options['breed']
-    @health_check = false #always set to false for a new animal.
-    @behaviour_check = true #set to true until I reach the extended methods.
+    @health_check = options['health_check'] if options['health_check']
+    @behaviour_check = options['behaviour_check'] if options['behaviour_check']
     @admission_date = options['admission_date']
-    @owner_id = options['owner_id'] if options['owner_id']
+    @owner_id = options['owner_id'].to_i if options['owner_id']
     @image = options['image']
   end
 
@@ -30,9 +29,11 @@ class Animal
           image
           )
           VALUES
-          ($1, $2, $3, FALSE, TRUE, $4, $5)'
+          ($1, $2, $3, false, true, $4, $5)
+          RETURNING *'
     values = [@name, @type, @breed, @admission_date, @image]
     result = SqlRunner.run(sql,values)
+    @id = result.first()['id'].to_i
   end
 
   #SHOW ALL
@@ -52,15 +53,15 @@ class Animal
   end
 
   #CHECK IF ADOPTABLE
-  def adoptable?
-    if @health_check && @behaviour_check
-      "AVAILABLE"
+  def adoptable
+    if @health_check == "t" && @behaviour_check == "t"
+      "Available"
     else
-      'Not Yet Available'
+      "Not Yet Available"
     end
   end
 
-  #SET TO ADOPTABLE?? should this be here or withn the views?
+  #SET TO ADOPTABLE?? should this be here or within the views?
   def vaccinate
     @health_check = true
   end
@@ -81,6 +82,12 @@ class Animal
         WHERE id = $9"
     values = [@name, @type, @breed, @health_check, @behaviour_check, @admission_date, @owners_id, @image, @id]
     SqlRunner.run( sql, values )
+  end
+
+  def adopt(owner_id)
+    animal = Animal.find(@id)
+    @owners_id = owner_id
+    animal.update
   end
 
 end

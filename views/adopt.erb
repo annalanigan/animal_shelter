@@ -1,8 +1,10 @@
 <img class="solo-photo" src="/images/<%= @animal.image %>" alt="photo of <%= @animal.name %>">
+
 <p>Name: <%= @animal.name %></p>
 <p>Type: <%= @animal.type.capitalize %></p>
 <p>Breed: <%= @animal.breed.capitalize %></p>
-<form method="post" action="/animals/<%= @animal.id %>">
+
+<form method="post" action="/adopt-me/<%= @animal.id %>/adopt">
   <input type="hidden" name="_method" value="put">
 
   <div class="form-group">
@@ -10,10 +12,12 @@
     <div class="form-item">
       <select name="owner_id">
         <% @owners.each do |owner| %>
-        <option value=<%= owner.id %> <%= "selected" if @animal.owner_id == owner.id %> ><%= owner.name %></option>
+        <option value="<%= owner.id %>"><%= owner.name %></option>
         <% end %>
       </select>
     </div>
   </div>
+
+  <button class="button big-button">Update</button>
 
 </form>

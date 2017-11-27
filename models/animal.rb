@@ -36,6 +36,7 @@ class Animal
     @id = result.first()['id'].to_i
   end
 
+
   #SHOW ALL
   def self.all
     sql = 'SELECT * FROM animals'
@@ -49,8 +50,17 @@ class Animal
           WHERE id = $1'
     values = [id]
     result = SqlRunner.run(sql,values).first
-    Animal.new(result)
+    return Animal.new(result)
   end
+
+  #check if adopted?
+  # def adopted
+  #   if !@owner_id.empty?
+  #     # !@owner_id.nil?
+  #     # @owner_id != nil
+  #     "Adopted"
+  #   end
+  # end
 
   #CHECK IF ADOPTABLE
   def adoptable
@@ -86,7 +96,7 @@ class Animal
 
   def adopt(owner_id)
     animal = Animal.find(@id)
-    @owners_id = owner_id
+    animal.owner_id = owner_id
     animal.update
   end
 

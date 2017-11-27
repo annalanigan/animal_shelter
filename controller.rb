@@ -34,8 +34,14 @@ get '/owners' do
   erb( :owners )
 end
 
-get '/adopt_me/:id' do
+get '/adopt-me/:id' do
   @animal = Animal.find(params[:id])
   @owners = Owner.all
   erb ( :adopt )
+end
+
+put '/adopt-me/:id/adopt' do
+  @animal = Animal.find(params[:id])
+  @animal.adopt(params[:owner_id])
+  redirect to '/'
 end

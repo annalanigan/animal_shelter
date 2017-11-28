@@ -35,11 +35,10 @@ class Owner
 
   #SHOW ALL
   def self.animals
-    sql = 'SELECT owners.*, animals.name, animals.type
+    sql = 'Select owners.*, animals.name AS animal_name
           FROM owners, animals
-          WHERE  owners.id = animals.owners_id'
-    result = SqlRunner.run(sql, values) #= returns an array of objects?
-    # map those and .new to display? with additional column?
+          WHERE animals.owners_id = owners.id'
+    SqlRunner.run(sql)
   end
 
 end

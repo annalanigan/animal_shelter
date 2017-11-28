@@ -13,8 +13,3 @@ animal2= Animal.new({'name' => 'Sunflower', 'type' => 'cat', 'breed' => 'burmese
 animal2.save
 animal3= Animal.new({'name' => 'Daisy', 'type' => 'dog', 'breed' => 'boxer', 'admission_date' => '01/08/2017', 'image' => 'boxer.jpg'})
 animal3.save
-
-
-
-binding.pry
-nil

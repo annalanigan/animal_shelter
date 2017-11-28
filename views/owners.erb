@@ -7,17 +7,17 @@
     <th>Adopted Animal</th>
   </tr>
 
-  <% @owners.each do |owner| %>
+  <% @table.each do |item| %>
     <tr>
-      <td><%= owner.name %></td>
-      <td><%= owner.address %></td>
-      <td><%= owner.phone_number %></td>
+      <td><%= item['name'] %></td>
+      <td><%= item['address'] %></td>
+      <td><%= item['phone_number'] %></td>
       <td>
-      <% if owner.home_check == true %>Passed
+      <% if item['home_check'] == true %>Passed
       <% else %>In Progress
       <% end %>
       </td>
-      <td>owner.animal</td>
+      <td><%= item['animal_name'] %></td>
     </tr>
   <% end %>
 </table>

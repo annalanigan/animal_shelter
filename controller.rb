@@ -30,7 +30,7 @@ put '/animals/:id' do # update
 end
 
 get '/owners' do
-  @owners = Owner.all
+  @table = Owner.animals
   @animals = Animal.all
   erb( :owners )
 end

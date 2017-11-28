@@ -101,12 +101,16 @@ class Animal
     values = [owner_id, @id]
     SqlRunner.run( sql, values )
   end
-  
-  # def owner_check
-  #   sql = "SELECT owners.*, animals.name
-  #         FROM owners, animals
-  #         WHERE animals.owners_id = owners.id"
-  #   SqlRunner.run(sql)
-  # end
+
+  def owner_check
+    sql = "SELECT owners.*, animals.name
+          FROM owners, animals
+          WHERE animals.owners_id = owners.id"
+    SqlRunner.run(sql)
+  end
+
+  def self.owner
+
+  end
 
 end

@@ -10,7 +10,7 @@ class Owner
     @name = options['name']
     @address = options['address']
     @phone_number = options['phone_number']
-    @home_check = true #set default to true until I reach the extensions.
+    @home_check = options['home_check'] if options['home_check']
   end
 
   def save
@@ -22,9 +22,22 @@ class Owner
           home_check
           )
           VALUES
-          ($1, $2, $3, TRUE)'
+          ($1, $2, $3, FALSE)'
     values = [@name, @address, @phone_number]
     result = SqlRunner.run(sql,values)
+  end
+
+  def update
+    sql = 'UPDATE owners
+          SET (
+            name,
+            address,
+            phone_number,
+            home_check) =
+            ($1, $2, $3, $4)
+          WHERE id = $5'
+    values = [@name, @address, @phone_number, @home_check, @id]
+    SqlRunner.run(sql, values)
   end
 
   def self.all
@@ -39,6 +52,15 @@ class Owner
           FROM owners, animals
           WHERE animals.owners_id = owners.id'
     SqlRunner.run(sql)
+  end
+
+  #FIND BY ID
+  def self.find(id)
+    sql = 'SELECT * FROM owners
+          WHERE id = $1'
+    values = [id]
+    result = SqlRunner.run(sql,values).first
+    return Owner.new(result)
   end
 
 end

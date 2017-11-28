@@ -30,14 +30,14 @@ get '/animal/:id' do
   erb ( :show )
 end
 
-# get form to update animals
+# get form to update animal
 get '/animal/:id/edit' do
   @animal = Animal.find(params[:id])
   @owners = Owner.all
   erb ( :edit )
 end
 
-# update
+# update animal
 put '/animals/:id' do
   Animal.new( params ).update
   redirect to '/'
@@ -51,16 +51,28 @@ get '/owners' do
   erb( :owners )
 end
 
-#get form to create new animal
+#get form to create new owner
 get '/owners/new' do
   @owners = Owner.all
   erb ( :new_owner )
 end
 
-# create new animal
+# create new owner
 post '/owners' do
   @owners = Owner.new(params)
   @owners.save
+  redirect to '/owners'
+end
+
+# get form to update owner
+get '/owners/:id/edit' do
+  @owners = Owner.find(params[:id])
+  erb ( :edit_owner )
+end
+
+# update owner
+put '/owners/:id' do
+  Owner.new( params ).update
   redirect to '/owners'
 end
 

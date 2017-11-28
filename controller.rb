@@ -51,6 +51,19 @@ get '/owners' do
   erb( :owners )
 end
 
+#get form to create new animal
+get '/owners/new' do
+  @owners = Owner.all
+  erb ( :new_owner )
+end
+
+# create new animal
+post '/owners' do
+  @owners = Owner.new(params)
+  @owners.save
+  redirect to '/owners'
+end
+
 # get form to adopt an animal
 get '/adopt-me/:id' do
   @animal = Animal.find(params[:id])

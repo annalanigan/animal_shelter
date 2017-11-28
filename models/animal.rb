@@ -55,7 +55,7 @@ class Animal
 
   # check if adopted?
   def adopted
-    if @owner_id
+    if @owner_id != nil
       "Adopted"
     end
   end

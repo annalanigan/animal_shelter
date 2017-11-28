@@ -25,6 +25,14 @@
     </div>
   </div>
 
+  <div class="form-group">
+      <label for="home-check">Home Check Completed:</label>
+      <div class="form-item">
+        <input type="radio" name="home_check" value=TRUE <%= "checked" if @owners.home_check == true %>>Yes</br>
+        <input type="radio" name="home_check" value=FALSE <%= "checked" if @owners.home_check != true %>>No</br>
+      </div>
+    </div>
+
   <button class="button big-button">UPDATE</button>
 
 </form>

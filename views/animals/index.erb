@@ -1,6 +1,8 @@
 <form method="get" action="/animals/new">
-  <button type="submit">Add New Animal</button>
+  <button class="btn" type="submit">Add New Animal</button>
 </form>
+
+<br>
 
 <table>
   <tr>
@@ -13,13 +15,13 @@
 
   <% @animals.each do |animal| %>
     <tr>
-      <td><a href="/animals/<%= animal.id %>" ><%= animal.name %></a></td>
-      <td><%= animal.type %></td>
-      <td><%= animal.breed %> </td>
+      <td><a href="/animals/<%= animal.id %>" ><%= animal.name.capitalize %></a></td>
+      <td><%= animal.type.capitalize %></td>
+      <td><%= animal.breed.capitalize %> </td>
       <td><%= animal.admission_date %></td>
       <td>
         <% if animal.adopted == true %>Adopted
-        <% elsif animal.adoptable == "Available" %><a href="/adopt-me/<%= animal.id %>">Adopt Me</a>
+        <% elsif animal.adoptable == true %><a href="/adopt-me/<%= animal.id %>">Adopt Me</a>
         <% else %>Not Yet Available
         <% end %>
       </td>

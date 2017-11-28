@@ -65,9 +65,9 @@ class Animal
   #CHECK IF ADOPTABLE
   def adoptable
     if @health_check == "t" && @behaviour_check == "t"
-      "Available"
+      true
     else
-      "Not Yet Available"
+      false
     end
   end
 

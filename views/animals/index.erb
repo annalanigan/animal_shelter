@@ -1,0 +1,28 @@
+<form method="get" action="/animals/new">
+  <button type="submit">Add New Animal</button>
+</form>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Animal</th>
+    <th>Breed</th>
+    <th>Admission Date</th>
+    <th>Ready for Adoption</th>
+  </tr>
+
+  <% @animals.each do |animal| %>
+    <tr>
+      <td><a href="/animals/<%= animal.id %>" ><%= animal.name %></a></td>
+      <td><%= animal.type %></td>
+      <td><%= animal.breed %> </td>
+      <td><%= animal.admission_date %></td>
+      <td>
+        <% if animal.adopted == true %>Adopted
+        <% elsif animal.adoptable == "Available" %><a href="/adopt-me/<%= animal.id %>">Adopt Me</a>
+        <% else %>Not Yet Available
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+</table>

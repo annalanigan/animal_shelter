@@ -1,6 +1,5 @@
 html {
   background-color: #63d1d8;
-  text-align: center
 }
 
 nav ul {
@@ -8,10 +7,29 @@ nav ul {
   padding: 0
 }
 
+nav ul li {
+  display: inline;
+  font-size: 20px
+}
+
 table {
-  display: inline-table;
+  display: inline-table
+}
+
+td, th {
+  border: 1px solid #999;
+  padding: 0.5rem
 }
 
 .solo-photo {
   max-width: 400px
 }
+
+.logo img {
+  width: 100px;
+  height: 100px;
+ }
+
+ .logo {
+   display: flex;
+ }

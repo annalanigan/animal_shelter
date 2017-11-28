@@ -10,7 +10,6 @@
     <th>Name</th>
     <th>Address</th>
     <th>Contact Number</th>
-    <th>Home Check</th>
     <th>Adopted Animal</th>
   </tr>
 
@@ -19,11 +18,6 @@
       <td><%= item['name'] %></td>
       <td><%= item['address'] %></td>
       <td><%= item['phone_number'] %></td>
-      <td>
-      <% if item['home_check'] == 't' %>Passed
-      <% else %>In Progress
-      <% end %>
-      </td>
       <td><%= item['animal_name'] %></td>
     </tr>
   <% end %>

@@ -53,12 +53,12 @@ class Animal
     return Animal.new(result)
   end
 
-  # check if adopted?
+  # check if adopted? ??
   def adopted
     if @owner_id.nil?
-      return
+      return false
     else
-      "Adopted"
+      return true
     end
   end
 

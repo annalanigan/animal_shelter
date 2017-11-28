@@ -55,7 +55,9 @@ class Animal
 
   # check if adopted?
   def adopted
-    if @owner_id != nil
+    if @owner_id.nil?
+      return
+    else
       "Adopted"
     end
   end
@@ -70,6 +72,7 @@ class Animal
   end
 
   #SET TO ADOPTABLE?? should this be here or within the views?
+  #this is not used currenlty in my erb or view files...
   def vaccinate
     @health_check = true
   end

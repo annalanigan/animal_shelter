@@ -12,7 +12,9 @@
     <div class="form-item">
       <select name="owner_id">
         <% @owners.each do |owner| %>
-        <option value="<%= owner.id %>"><%= owner.name %></option>
+          <% unless owner.home_check == 'f' %>
+            <option value="<%= owner.id %>"><%= owner.name %></option>
+          <% end %>
         <% end %>
       </select>
     </div>

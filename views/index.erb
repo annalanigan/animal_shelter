@@ -1,3 +1,7 @@
+<form method="get" action="/animal/new">
+  <button type="submit">Add New Animal</button>
+</form>
+
 <table>
   <tr>
     <th>Name</th>
@@ -14,7 +18,7 @@
       <td><%= animal.breed %> </td>
       <td><%= animal.admission_date %></td>
       <td>
-        
+
         <% if animal.adoptable == "Available" %><a href="/adopt-me/<%= animal.id %>">Adopt Me</a>
         <% else %>Not Yet Available
         <% end %>

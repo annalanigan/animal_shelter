@@ -1,3 +1,5 @@
+<h2>Owners listed with their adpoted animals:</h2>
+
 <table>
   <tr>
     <th>Name</th>
@@ -13,11 +15,35 @@
       <td><%= item['address'] %></td>
       <td><%= item['phone_number'] %></td>
       <td>
-      <% if item['home_check'] == true %>Passed
+      <% if item['home_check'] == 't' %>Passed
       <% else %>In Progress
       <% end %>
       </td>
       <td><%= item['animal_name'] %></td>
+    </tr>
+  <% end %>
+</table>
+
+<h2>All Owners list:</h2>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Contact Number</th>
+    <th>Home Check</th>
+  </tr>
+
+  <% @owners.each do |owner| %>
+    <tr>
+      <td><%= owner.name %></td>
+      <td><%= owner.address %></td>
+      <td><%= owner.phone_number %></td>
+      <td>
+      <% if owner.home_check == true %>Passed
+      <% else %>In Progress
+      <% end %>
+      </td>
     </tr>
   <% end %>
 </table>

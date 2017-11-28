@@ -1,0 +1,58 @@
+
+<form action="/animal" method="post">
+  <input type="hidden" name="_method" value="put">
+
+  <div class="form-group">
+    <label for="animal-name">Name:</label>
+    <div class="form-item">
+      <input type="text" name="name" value=""/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="animal-type">Type:</label>
+    <div class="form-item">
+      <input type="text" name="type" value=""/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="animal-breed">Breed:</label>
+    <div class="form-item">
+      <input type="text" name="breed" value=""/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="animal-health">Health Check:</label>
+    <div class="form-item">
+      <input type="radio" name="health_check" value=TRUE >Yes</br>
+      <input type="radio" name="health_check" value=FALSE checked="checked">No</br>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="animal-behaviour">Behaviour Check:</label>
+    <div class="form-item">
+      <input type="radio" name="behaviour_check" value=TRUE>Yes</br>
+      <input type="radio" name="behaviour_check" value=FALSE checked="checked">No</br>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="admission-date">Admitted:</label>
+    <div class="form-item">
+      <input type="text" name="admission_date" value=""/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="image">Photo:</label>
+    <div class="form-item">
+      <input type="file" name="image" value="" />
+    </div>
+  </div>
+
+  <button class="button big-button">ADD</button>
+
+</form>

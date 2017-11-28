@@ -109,8 +109,4 @@ class Animal
     SqlRunner.run(sql)
   end
 
-  def self.owner
-
-  end
-
 end

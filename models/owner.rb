@@ -39,7 +39,7 @@ class Owner
           FROM owners, animals
           WHERE  owners.id = animals.owners_id'
     result = SqlRunner.run(sql, values) #= returns an array of objects?
-    # map those and .new to display?
+    # map those and .new to display? with additional column?
   end
 
 end

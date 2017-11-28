@@ -14,6 +14,7 @@
       <td><%= animal.breed %> </td>
       <td><%= animal.admission_date %></td>
       <td>
+        
         <% if animal.adoptable == "Available" %><a href="/adopt-me/<%= animal.id %>">Adopt Me</a>
         <% else %>Not Yet Available
         <% end %>

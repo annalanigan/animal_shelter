@@ -53,14 +53,12 @@ class Animal
     return Animal.new(result)
   end
 
-  #check if adopted?
-  # def adopted
-  #   if !@owner_id.empty?
-  #     # !@owner_id.nil?
-  #     # @owner_id != nil
-  #     "Adopted"
-  #   end
-  # end
+  # check if adopted?
+  def adopted
+    if @owner_id
+      "Adopted"
+    end
+  end
 
   #CHECK IF ADOPTABLE
   def adoptable
@@ -86,18 +84,29 @@ class Animal
             health_check,
             behaviour_check,
             admission_date,
-            owners_id,
             image ) =
-            ( $1, $2, $3, $4, $5, $6, $7, $8 )
-        WHERE id = $9"
-    values = [@name, @type, @breed, @health_check, @behaviour_check, @admission_date, @owners_id, @image, @id]
+            ( $1, $2, $3, $4, $5, $6, $7)
+        WHERE id = $8"
+    values = [@name, @type, @breed, @health_check, @behaviour_check, @admission_date, @image, @id]
     SqlRunner.run( sql, values )
   end
 
   def adopt(owner_id)
     animal = Animal.find(@id)
-    animal.owner_id = owner_id
-    animal.update
+    sql = "UPDATE animals
+          SET
+          ( owners_id ) =
+            ( $1 )
+        WHERE id = $2"
+    values = [owner_id, @id]
+    SqlRunner.run( sql, values )
   end
+  
+  # def owner_check
+  #   sql = "SELECT owners.*, animals.name
+  #         FROM owners, animals
+  #         WHERE animals.owners_id = owners.id"
+  #   SqlRunner.run(sql)
+  # end
 
 end

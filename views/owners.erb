@@ -13,13 +13,11 @@
       <td><%= owner.address %></td>
       <td><%= owner.phone_number %></td>
       <td>
-      <% if owner.home_check == true %>
-      Passed
-      <% else %>
-      In Progress
+      <% if owner.home_check == true %>Passed
+      <% else %>In Progress
       <% end %>
       </td>
-      <td>to be updated...</td>
+      <td>owner.animal</td>
     </tr>
   <% end %>
 </table>

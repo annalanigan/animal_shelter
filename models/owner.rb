@@ -71,9 +71,11 @@ class Owner
   end
 
   def self.owners_no_pets
-    sql = 'select DISTINCT owners.*
-          from owners, animals
-          WHERE animals.owner_id != owners.id'
+    sql = 'SELECT * FROM owners o
+          WHERE o.id
+          NOT IN (SELECT o.id FROM owners o
+          INNER JOIN animals a
+          ON o.id = a.owner_id)'
     SqlRunner.run(sql)
   end
 

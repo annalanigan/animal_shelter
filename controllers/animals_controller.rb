@@ -21,7 +21,7 @@ end
 post '/animals' do
   @animal = Animal.new(params)
   @animal.save
-  redirect to '/'
+  redirect to '/animals'
 end
 
 # to see details of an individual animals
@@ -40,5 +40,5 @@ end
 # update animal
 put '/animals/:id' do
   Animal.new( params ).update
-  redirect to '/'
+  redirect to '/animals'
 end

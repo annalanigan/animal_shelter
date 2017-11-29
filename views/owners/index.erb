@@ -5,7 +5,7 @@
 
 <h2>Owners listed with their adpoted animals:</h2>
 
-<table class="sortable">
+<table>
   <tr>
     <th>Name</th>
     <th>Address</th>
@@ -23,7 +23,7 @@
   <% end %>
 </table>
 
-<h2>All Owners list:</h2>
+<h2>New Owners list:</h2>
 
 <table>
   <tr>
@@ -33,18 +33,26 @@
     <th>Home Check</th>
   </tr>
 
-  <% @owners.each do |owner| %>
+  <% @table2.each do |owner| %>
     <tr>
-      <td><a href="/owners/<%= owner.id %>"><%= owner.name %></a></td>
-      <td><%= owner.address %></td>
-      <td><%= owner.phone_number %></td>
+      <td><%= owner['name'] %></td>
+      <td><%= owner['address'] %></td>
+      <td><%= owner['phone_number'] %></td>
       <td>
-      <% if owner.home_check == 't' %>Passed
+      <% if owner['home_check'] == 't' %>Passed
       <% else %>In Progress
       <% end %>
       </td>
-      <td><a href="/owners/<%=owner.id%>/edit">edit</a></td>
-      <td><a href="/animals/<%=owner.id%>/delete">Delete</a></td>
+      <td><a href="/owners/<%=owner['id']%>/edit">edit</a></td>
+      <td>
+
+        <form class="delete" action="/owners/<%=owner['id']%>" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <button type="submit" >delete</button>
+        </form>
+
+      </td>
+
     </tr>
   <% end %>
 </table>

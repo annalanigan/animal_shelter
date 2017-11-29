@@ -8,6 +8,7 @@ require_relative('../models/animal')
 # INDEX owners and adopted animals
 get '/owners' do
   @table = Owner.animals
+  @table2 = Owner.owners_no_pets
   @owners = Owner.all
   @animals = Animal.all
   erb( :"owners/index" )
@@ -45,8 +46,12 @@ end
 
 # SHOW
 
+get '/owners/:id/delete' do
+  erb (:"owners/delete")
+end
+
 # DELETE an owner
-delete 'owner/:id' do
+delete '/owners/:id' do
   owner = Owner.find(params[:id])
   owner.delete
   redirect to '/owners'

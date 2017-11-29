@@ -70,4 +70,11 @@ class Owner
     SqlRunner.run(sql, values)
   end
 
+  def self.owners_no_pets
+    sql = 'select DISTINCT owners.*
+          from owners, animals
+          WHERE animals.owner_id != owners.id'
+    SqlRunner.run(sql)
+  end
+
 end

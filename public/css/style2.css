@@ -8,9 +8,15 @@ header {
   text-align: center;
 }
 
-section {
-  display: inline-block;
-  margin: 10px;
+nav {
+  position: fixed;
+  top: 80px;
+  left: 10px;
+}
+
+body {
+  overflow: scroll;
+  padding-left: 150px;
 }
 
 nav ul {

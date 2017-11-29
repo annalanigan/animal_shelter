@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>Animal Shelter</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style2.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 </head>
 
 <header>
@@ -15,23 +16,34 @@
 
 </header>
 
-<body>
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/animals">Animals</a></li>
-      <li><a href="/owners">Owners</a></li>
-    </ul>
-  </nav>
+<section id="main">
 
-  <section>
-    <%= yield %>
-    <br>
-  </section>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/animals">Animals</a></li>
+        <li><a href="/owners">Owners</a></li>
+      </ul>
+    </nav>
 
-</body>
+</section>
+
+
+<section>
+
+  <body>
+    <div>
+      <%= yield %>
+      <br>
+    </div>
+  </body>
+
+</section>
 
 <br>
-<footer>Contact us: 0131 123 4567</footer>
+<footer>
+  <p><a href="0131 123 4567">Contact us: 0131 123 4567</a><br/>email:<a href="info@kirkton.co.uk">info@kirkton.co.uk</a></p>
+</footer>
+
 
 </html>

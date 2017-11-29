@@ -4,28 +4,40 @@ html {
 }
 
 header {
-  float:
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 0px auto;
+  background-color: #63d1d8;
+  width:100%;
+  position:fixed;
+  top:0px;
 }
 
 nav {
-  position: fixed;
-  top: 80px;
-  left: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
 }
 
-body {
-  overflow: scroll;
-  padding-left: 150px;
-}
-
-nav ul {
+ul {
   list-style-type: none;
   padding: 0
 }
 
-nav ul li {
-  font-size: 20px
+li {
+  font-size: 20px;
+  display: inline;
+}
+
+body {
+  overflow: scroll;
+  margin-top: 0px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
 }
 
 table {
@@ -48,10 +60,8 @@ td, th {
 
  .logo {
    display: flex;
+   align-items: center;
  }
-
- .btn {
-}
 
 footer {
   margin-top: 20px;

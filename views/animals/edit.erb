@@ -9,43 +9,43 @@
 
       <li>
         <label for="animal-name">Name:</label>
-          <input type="text" name="name" value="<%= @animal.name %>"/>
+        <input type="text" name="name" value="<%= @animal.name %>"/>
       </li>
 
       <li>
         <label for="animal-type">Type:</label>
-          <input type="text" name="type" value="<%= @animal.type %>"/>
+        <input type="text" name="type" value="<%= @animal.type %>"/>
       </li>
 
       <li>
         <label for="animal-breed">Breed:</label>
-          <input type="text" name="breed" value="<%= @animal.breed %>"/>
+        <input type="text" name="breed" value="<%= @animal.breed %>"/>
       </li>
 
       <ul class="flex-inner">
 
         <li>
           <label for="animal-health">Health Check:</label>
-            <input type="radio" name="health_check" value=TRUE <%= "checked" if @animal.health_check == 't' %>>Yes</br>
-            <input type="radio" name="health_check" value=FALSE <%= "checked" if @animal.health_check != 't' %>>No</br>
+          <input type="radio" name="health_check" value=TRUE <%= "checked" if @animal.health_check == 't' %>>Yes</br>
+          <input type="radio" name="health_check" value=FALSE <%= "checked" if @animal.health_check != 't' %>>No</br>
         </li>
 
         <li>
           <label for="animal-behaviour">Behaviour Check:</label>
-            <input type="radio" name="behaviour_check" value=TRUE <%= "checked" if @animal.behaviour_check == 't' %>>Yes</br>
-            <input type="radio" name="behaviour_check" value=FALSE <%= "checked" if @animal.behaviour_check != 't' %>>No</br>
+          <input type="radio" name="behaviour_check" value=TRUE <%= "checked" if @animal.behaviour_check == 't' %>>Yes</br>
+          <input type="radio" name="behaviour_check" value=FALSE <%= "checked" if @animal.behaviour_check != 't' %>>No</br>
         </li>
 
       </ul>
 
       <li>
         <label for="admission-date">Admitted:</label>
-          <input type="date" name="admission_date" value="<%= @animal.admission_date %>"/>
+        <input type="date" name="admission_date" value="<%= @animal.admission_date %>"/>
       </li>
 
       <li>
         <label for="Image">Image:</label>
-          <input type="text" name="image" value="<%= @animal.image %>"/>
+        <input type="text" name="image" value="<%= @animal.image %>"/>
       </li>
 
     </ul>

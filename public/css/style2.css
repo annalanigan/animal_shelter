@@ -6,66 +6,60 @@ html {
 header {
   display: flex;
   justify-content: center;
-  margin: 0px auto;
+  margin: 0px;
   background-color: #63d1d8;
   width:100%;
   position:fixed;
-  top:0px;
+  top: 0px;
+  font-size: 25px
 }
 
-nav {
-  display: flex;
-  justify-content: center;
+h1  {
+  margin: 20px;
+}
+
+section {
+  display: inline-block;
   margin-top: 100px;
 }
 
-ul {
+nav {
+  position:fixed;
+  display: flex;
+  justify-content: space-around;
+  width:100%;
+  margin-top: 40px;
+  background-color: #63d1d8;
+}
+
+nav ul {
   list-style-type: none;
-  padding: 0
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
 }
 
 nav li {
   font-size: 20px;
   display: inline;
+  padding: 0px 10px;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
+.nav-link:link {
+   color: #fb3f00;
+   text-decoration: none;
 }
 
-.flex-outer li,
-.flex-inner {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 20px;
-  padding: 3px;
+.nav-link:visited {
+   color: #fb3f00;
+   text-decoration: none;
 }
 
-.flex-outer ul,
-.flex-inner {
-  list-style-type: none;
-  padding: 0;
-  font-size:15px;
-  display: inline;
+.nav-link:active {
+   color: #fb3f00;
+   text-decoration: none;
 }
 
-.flex-outer ul label,
-.flex-inner {
-  padding-right: 10px;
-}
-
-
-body {
-  overflow: scroll;
-  margin-top: 0px;
-}
-
-section {
-  display: flex;
-  justify-content: center;
-  margin-top: auto;
-}
 
 table {
   display: inline-table
@@ -76,8 +70,85 @@ td, th {
   padding: 0.5rem
 }
 
+body {
+  font: 15px "Poppins", sans-serif;
+  background: #63d1d8;
+  color: #fff;
+  padding: 50px 0;
+}
+
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.flex-outer,
+.flex-inner {
+  list-style-type: none;
+  padding: 0;
+}
+
+.flex-outer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.flex-outer li,
+.flex-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-inner {
+  padding: 8px;
+  justify-content: space-between;
+}
+
+.flex-outer > li {
+  margin-bottom: 10px;
+}
+
+.flex-outer li label,
+.flex-outer li p {
+  padding: 0px 8px;
+  font-weight: 300;
+  letter-spacing: .09em;
+  text-transform: capitalize;
+}
+
+.flex-outer > li > label,
+.flex-outer li p {
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+
+.flex-outer li input,
+.flex-outer li textarea {
+  padding: 8px;
+  border: none;
+}
+
+.flex-inner li {
+  width: 100px;
+}
+
+input {
+  font-size: 15px;
+  padding: 0px;
+}
+
 .solo-photo {
-  max-width: 400px
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  margin: 20px;
+}
+
+section.content {
+  display: flex;
+  justify-content: center;
 }
 
 .logo img {
@@ -87,8 +158,10 @@ td, th {
 
  .logo {
    display: flex;
-   align-items: center;
  }
+
+ .btn {
+}
 
 footer {
   margin-top: 20px;

@@ -4,22 +4,44 @@ html {
 }
 
 header {
-  float:
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  background-color: #63d1d8;
+  width:100%;
+  position:fixed;
+  top: 0px;
+  font-size: 25px
+}
+h1  {
+  margin: 20px;
 }
 
 section {
   display: inline-block;
-  margin: 10px;
+  margin-top: 100px;
+}
+
+nav {
+  position:fixed;
+  display: flex;
+  justify-content: space-around;
+  width:100%;
+  margin-top: 40px;
+  background-color: #63d1d8;
 }
 
 nav ul {
   list-style-type: none;
-  padding: 0
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
 }
 
-nav ul li {
-  font-size: 20px
+nav li {
+  font-size: 20px;
+  display: inline;
+  padding: 0px 10px;
 }
 
 table {
@@ -31,8 +53,82 @@ td, th {
   padding: 0.5rem
 }
 
+body {
+  font: 15px "Poppins", sans-serif;
+  background: #63d1d8;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.flex-outer,
+.flex-inner {
+  list-style-type: none;
+  padding: 0;
+}
+
+.flex-outer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.flex-outer li,
+.flex-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-inner {
+  padding: 8px;
+  justify-content: space-around;
+}
+
+.flex-outer > li {
+  margin-bottom: 10px;
+}
+
+.flex-outer li label,
+.flex-outer li p {
+  padding: 0px 8px;
+  font-weight: 300;
+  letter-spacing: .09em;
+  text-transform: capitalize;
+}
+
+.flex-outer > li > label,
+.flex-outer li p {
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+
+.flex-outer li input,
+.flex-outer li textarea {
+  padding: 8px;
+  border: none;
+}
+
+.flex-inner li {
+  width: 100px;
+}
+
+input {
+  font-size: 15px;
+  padding: 0px;
+}
+
 .solo-photo {
-  max-width: 400px
+  width: 400px;
+  margin: 0px;
+}
+
+section.content {
+  display: flex;
+  justify-content: center;
 }
 
 .logo img {

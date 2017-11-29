@@ -1,29 +1,29 @@
 
 <h2>Please enter all details for a new owner</h2>
 
-<form action="/owners" method="post">
+<div class="container">
 
-  <div class="form-group">
-    <label for="owner-name">Name:</label>
-    <div class="form-item">
-      <input type="text" name="name" value=""/>
-    </div>
-  </div>
+  <form action="/owners" method="post">
 
-  <div class="form-group">
-    <label for="owner-address">Address:</label>
-    <div class="form-item">
-      <input type="text" name="address" value=""/>
-    </div>
-  </div>
+    <ul class="flex-outer">
 
-  <div class="form-group">
-    <label for="owner-phone-number">Contact Number:</label>
-    <div class="form-item">
-      <input type="text" name="phone_number" value=""/>
-    </div>
-  </div>
+      <li>
+        <label for="owner-name">Name:</label>
+        <input type="text" name="name" value=""/>
+      </li>
 
-  <button class="button big-button">ADD</button>
+      <li>
+        <label for="owner-address">Address:</label>
+        <input type="text" name="address" value=""/>
+      </li>
 
-</form>
+      <li>
+        <label for="owner-phone-number">Contact Number:</label>
+        <input type="text" name="phone_number" value=""/>
+      </li>
+
+    </ul>
+
+    <button class="btn">ADD</button>
+
+  </form>

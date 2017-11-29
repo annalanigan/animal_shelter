@@ -16,7 +16,7 @@ CREATE TABLE animals (
   breed VARCHAR(255),
   health_check BOOLEAN,
   behaviour_check BOOLEAN,
-  admission_date VARCHAR(255),
+  admission_date DATE,
   owner_id INT4 REFERENCES owners(id),
   image VARCHAR(255)
 );

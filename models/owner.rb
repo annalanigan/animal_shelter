@@ -48,7 +48,7 @@ class Owner
 
   #SHOW ALL
   def self.animals
-    sql = 'Select owners.*, animals.name AS animal_name
+    sql = 'Select owners.*, animals.name AS animal_name, animals.id AS animal_id
           FROM owners, animals
           WHERE animals.owner_id = owners.id'
     SqlRunner.run(sql)

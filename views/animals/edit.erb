@@ -1,59 +1,56 @@
 <img class="solo-photo" src="/images/<%= @animal.image %>" alt="Image of <%= @animal.name %>">
 
-<form action="/animals/<%= @animal.id %>" method="post">
-  <input type="hidden" name="_method" value="put">
+<div class="container">
 
-  <div class="form-group">
-    <label for="animal-name">Name:</label>
-    <div class="form-item">
-      <input type="text" name="name" value="<%= @animal.name %>"/>
-    </div>
-  </div>
+  <form action="/animals/<%= @animal.id %>" method="post">
+    <input type="hidden" name="_method" value="put">
 
-  <div class="form-group">
-    <label for="animal-type">Type:</label>
-    <div class="form-item">
-      <input type="text" name="type" value="<%= @animal.type %>"/>
-    </div>
-  </div>
+    <ul class="flex-outer">
 
-  <div class="form-group">
-    <label for="animal-breed">Breed:</label>
-    <div class="form-item">
-      <input type="text" name="breed" value="<%= @animal.breed %>"/>
-    </div>
-  </div>
+      <li>
+        <label for="animal-name">Name:</label>
+          <input type="text" name="name" value="<%= @animal.name %>"/>
+      </li>
 
-  <div class="form-group">
-    <label for="animal-health">Health Check:</label>
-    <div class="form-item">
-      <input type="radio" name="health_check" value=TRUE <%= "checked" if @animal.health_check == 't' %>>Yes</br>
-      <input type="radio" name="health_check" value=FALSE <%= "checked" if @animal.health_check != 't' %>>No</br>
-    </div>
-  </div>
+      <li>
+        <label for="animal-type">Type:</label>
+          <input type="text" name="type" value="<%= @animal.type %>"/>
+      </li>
 
-  <div class="form-group">
-    <label for="animal-behaviour">Behaviour Check:</label>
-    <div class="form-item">
-      <input type="radio" name="behaviour_check" value=TRUE <%= "checked" if @animal.behaviour_check == 't' %>>Yes</br>
-      <input type="radio" name="behaviour_check" value=FALSE <%= "checked" if @animal.behaviour_check != 't' %>>No</br>
-    </div>
-  </div>
+      <li>
+        <label for="animal-breed">Breed:</label>
+          <input type="text" name="breed" value="<%= @animal.breed %>"/>
+      </li>
 
-  <div class="form-group">
-    <label for="admission-date">Admitted:</label>
-    <div class="form-item">
-      <input type="date" name="admission_date" value="<%= @animal.admission_date %>"/>
-    </div>
-  </div>
+      <ul class="flex-inner">
 
-  <div class="form-group">
-    <label for="Image">Image:</label>
-    <div class="form-item">
-      <input type="text" name="image" value="<%= @animal.image %>"/>
-    </div>
-  </div>
+        <li>
+          <label for="animal-health">Health Check:</label>
+            <input type="radio" name="health_check" value=TRUE <%= "checked" if @animal.health_check == 't' %>>Yes</br>
+            <input type="radio" name="health_check" value=FALSE <%= "checked" if @animal.health_check != 't' %>>No</br>
+        </li>
 
-  <button class="button big-button">Update</button>
+        <li>
+          <label for="animal-behaviour">Behaviour Check:</label>
+            <input type="radio" name="behaviour_check" value=TRUE <%= "checked" if @animal.behaviour_check == 't' %>>Yes</br>
+            <input type="radio" name="behaviour_check" value=FALSE <%= "checked" if @animal.behaviour_check != 't' %>>No</br>
+        </li>
 
-</form>
+      </ul>
+
+      <li>
+        <label for="admission-date">Admitted:</label>
+          <input type="date" name="admission_date" value="<%= @animal.admission_date %>"/>
+      </li>
+
+      <li>
+        <label for="Image">Image:</label>
+          <input type="text" name="image" value="<%= @animal.image %>"/>
+      </li>
+
+    </ul>
+
+    <button class="button big-button">Update</button>
+
+  </form>
+</div>

@@ -24,10 +24,37 @@ ul {
   padding: 0
 }
 
-li {
+nav li {
   font-size: 20px;
   display: inline;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-outer li,
+.flex-inner {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+  padding: 3px;
+}
+
+.flex-outer ul,
+.flex-inner {
+  list-style-type: none;
+  padding: 0;
+  font-size:15px;
+  display: inline;
+}
+
+.flex-outer ul label,
+.flex-inner {
+  padding-right: 10px;
+}
+
 
 body {
   overflow: scroll;

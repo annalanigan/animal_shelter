@@ -18,7 +18,7 @@
       <td><%= item['name'] %></td>
       <td><%= item['address'] %></td>
       <td><%= item['phone_number'] %></td>
-      <td><%= item['animal_name'] %></td>
+      <td> <a href="/animals/<%= item['animal_id']%>"> <%= item['animal_name'] %></a></td>
     </tr>
   <% end %>
 </table>
@@ -31,6 +31,8 @@
     <th>Address</th>
     <th>Contact Number</th>
     <th>Home Check</th>
+    <th></th>
+    <th></th>
   </tr>
 
   <% @table2.each do |owner| %>

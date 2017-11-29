@@ -22,7 +22,7 @@
       <td><%= animal.admission_date %></td>
       <td>
         <% if animal.owner_id %>Adopted
-        <% elsif animal.adoptable == true %><a href="/adopt-me/<%= animal.id %>">Adopt Me</a>
+        <% elsif animal.adoptable == true %><a class="highlight" a href="/adopt-me/<%= animal.id %>">Adopt Me</a>
         <% else %>Not Yet Available
         <% end %>
       </td>

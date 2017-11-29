@@ -50,7 +50,7 @@ class Owner
   def self.animals
     sql = 'Select owners.*, animals.name AS animal_name
           FROM owners, animals
-          WHERE animals.owners_id = owners.id'
+          WHERE animals.owner_id = owners.id'
     SqlRunner.run(sql)
   end
 

@@ -55,6 +55,7 @@ class Animal
 
   # check if adopted? ??
   def adopted
+    # animal = Animal.find(@id)
     if @owner_id.nil?
       return false
     else
@@ -98,7 +99,7 @@ class Animal
     animal = Animal.find(@id)
     sql = "UPDATE animals
           SET
-          ( owners_id ) =
+          ( owner_id ) =
             ( $1 )
         WHERE id = $2"
     values = [owner_id, @id]
@@ -108,7 +109,7 @@ class Animal
   def owner_check
     sql = "SELECT owners.*, animals.name
           FROM owners, animals
-          WHERE animals.owners_id = owners.id"
+          WHERE animals.owner_id = owners.id"
     SqlRunner.run(sql)
   end
 

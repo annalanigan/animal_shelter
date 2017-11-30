@@ -24,5 +24,5 @@ end
 put '/adopt-me/:id/adopt' do
   animal = Animal.find(params[:id])
   animal.adopt(params[:owner_id])
-  redirect to '/'
+  redirect to '/owners'
 end

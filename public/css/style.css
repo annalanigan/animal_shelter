@@ -28,6 +28,10 @@ section {
   margin-top: 110px;
 }
 
+div.title-page {
+  text-align: center;
+}
+
 nav {
   position: fixed;
   display: flex;

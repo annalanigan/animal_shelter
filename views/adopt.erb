@@ -7,9 +7,8 @@
 <form method="post" action="/adopt-me/<%= @animal.id %>/adopt">
   <input type="hidden" name="_method" value="put">
 
-<ul>
-  <li>
     <label for="owner-name">Adopted By:</label>
+
       <select name="owner_id">
         <% @owners.each do |owner| %>
           <% unless owner.home_check == 'f' %>
@@ -17,8 +16,9 @@
           <% end %>
         <% end %>
       </select>
-    </li>
-  </ul>
+
+  <br>
+  <br>
 
   <button class="btn">ADOPT</button>
 

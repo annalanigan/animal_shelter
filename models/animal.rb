@@ -29,7 +29,7 @@ class Animal
           image
           )
           VALUES
-          ($1, $2, $3, false, true, $4, $5)
+          ($1, $2, $3, false, false, $4, $5)
           RETURNING *'
     values = [@name, @type, @breed, @admission_date, @image]
     result = SqlRunner.run(sql,values)

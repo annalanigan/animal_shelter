@@ -1,13 +1,12 @@
 html {
-  background-color: #63d1d8;
+  background-color: #18ADA4;
   font-family: 'Poppins', sans-serif;
 }
 
 header {
   display: flex;
   justify-content: center;
-  margin: 0px;
-  background-color: #63d1d8;
+  background-color: #18ADA4;
   width:100%;
   position:fixed;
   top: 0px;
@@ -18,15 +17,10 @@ h1  {
   margin: 20px;
 }
 
-content p {
-  font-size: 20px;
-  margin: 0px;
-  padding: 0px;
-}
-
 section {
-  display: inline-block;
-  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  margin-top: 110px;
 }
 
 nav {
@@ -35,7 +29,7 @@ nav {
   justify-content: space-around;
   width:100%;
   margin-top: 40px;
-  background-color: #63d1d8;
+  background-color:#18ADA4;
 }
 
 nav ul {
@@ -51,91 +45,19 @@ nav li {
   padding: 0px 10px;
 }
 
-table {
-  display: inline-table
-}
-
-td, th {
-  border: 1px solid #999;
-  padding: 0.5rem
-}
-
 body {
   font: "Poppins", sans-serif;
-  background: #63d1d8;
+  background: #18ADA4;
   color: #fff;
   padding: 50px 0;
-}
-
-.container {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.flex-outer,
-.flex-inner {
-  list-style-type: none;
-  padding: 0;
-}
-
-.flex-outer {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.flex-outer li,
-.flex-inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.flex-inner {
-  padding: 8px;
-  justify-content: space-around;
-}
-
-.flex-outer > li {
-  margin-bottom: 10px;
-}
-
-.flex-outer li label,
-.flex-outer li p {
-  padding: 0px 8px;
-  font-weight: 300;
-  letter-spacing: .09em;
-  text-transform: capitalize;
-}
-
-.flex-outer > li > label,
-.flex-outer li p {
-  flex: 1 0 120px;
-  max-width: 220px;
-}
-
-.flex-outer li input,
-.flex-outer li textarea {
-  padding: 8px;
-  border: none;
-}
-
-.flex-inner li {
-  width: 100px;
-}
-
-.highlight {
-  color: #FF792B;
-
-}
-
-input {
-  font-size: 15px;
-  padding: 0px;
 }
 
 .solo-photo {
   width: 400px;
   margin: 0px;
+  border: solid;
+  border-color: #FF792B;
+  border-width: 2px
 }
 
 .welcome-logo {
@@ -146,6 +68,7 @@ input {
 section.content {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .logo img {
@@ -157,17 +80,9 @@ section.content {
    display: flex;
  }
 
- .btn {
-  line-height: 1;
-  display: inline-block;
-  font-size: 15px;
-  text-decoration: none;
-  border-radius: 5px;
-  padding: 8px;
-  color: white;
-  background-color: #FF792B;
+a {
+  color:#5A18AD;
 }
-
 
 footer {
   margin-top: 20px;

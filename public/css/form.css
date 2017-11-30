@@ -1,0 +1,59 @@
+
+
+input {
+  font-size: 15px;
+  padding: 0px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.flex-outer,
+.flex-inner {
+  list-style-type: none;
+  padding: 0;
+}
+
+.flex-outer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.flex-outer li,
+.flex-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-inner {
+  padding: 8px;
+  justify-content: space-around;
+}
+
+.flex-outer > li {
+  margin-bottom: 10px;
+}
+
+.flex-outer li label,
+.flex-outer li p {
+  padding: 0px 8px;
+}
+
+.flex-outer > li > label,
+.flex-outer li p {
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+
+.flex-outer li input,
+.flex-outer li textarea {
+  padding: 8px;
+  border: none;
+}
+
+.flex-inner li {
+  width: 100px;
+}

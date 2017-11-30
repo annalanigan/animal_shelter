@@ -1,0 +1,10 @@
+.btn {
+ line-height: 1;
+ display: inline-block;
+ font-size: 15px;
+ text-decoration: none;
+ border-radius: 5px;
+ padding: 8px;
+ color: white;
+ background-color: #FF792B;
+}

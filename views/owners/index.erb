@@ -46,14 +46,7 @@
       <% end %>
       </td>
       <td><a href="/owners/<%=owner['id']%>/edit">edit</a></td>
-      <td>
-
-        <form class="delete" action="/owners/<%=owner['id']%>" method="post">
-          <input type="hidden" name="_method" value="delete">
-          <button type="btn" >delete</button>
-        </form>
-
-      </td>
+      <td><a href="/owners/<%=owner['id']%>/delete">delete</a></td>
 
     </tr>
   <% end %>

@@ -44,9 +44,9 @@ put '/owners/:id' do
   redirect to '/owners'
 end
 
-# SHOW
-
+# confirm delete animal
 get '/owners/:id/delete' do
+  @owner = Owner.find(params[:id])
   erb (:"owners/delete")
 end
 

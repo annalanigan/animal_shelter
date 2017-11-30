@@ -9,17 +9,17 @@
 
       <li>
         <label for="animal-name">Name:</label>
-        <input type="text" name="name" value="<%= @animal.name %>"/>
+        <input type="text" name="name" value="<%= @animal.name.capitalize %>"/>
       </li>
 
       <li>
         <label for="animal-type">Type:</label>
-        <input type="text" name="type" value="<%= @animal.type %>"/>
+        <input type="text" name="type" value="<%= @animal.type.capitalize %>"/>
       </li>
 
       <li>
         <label for="animal-breed">Breed:</label>
-        <input type="text" name="breed" value="<%= @animal.breed %>"/>
+        <input type="text" name="breed" value="<%= @animal.breed.capitalize %>"/>
       </li>
 
       <ul class="flex-inner">

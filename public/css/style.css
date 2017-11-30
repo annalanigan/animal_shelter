@@ -10,11 +10,16 @@ header {
   width:100%;
   position:fixed;
   top: 0px;
-  font-size: 25px
+  font-size: 25px;
+  margin: auto;
 }
 
 h1  {
   margin: 20px;
+}
+
+h2 {
+  text-align: center;
 }
 
 section {
@@ -49,7 +54,7 @@ body {
   font: "Poppins", sans-serif;
   background: #18ADA4;
   color: #fff;
-  padding: 50px 0;
+  padding-top: 50px;
 }
 
 .solo-photo {
@@ -61,11 +66,11 @@ body {
 }
 
 .welcome-logo {
-  width: 400px;
+  width: 350px;
   margin: 0px;
 }
 
-section.content {
+.content {
   display: flex;
   justify-content: center;
   width: 100%;

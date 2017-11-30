@@ -6,19 +6,13 @@ input {
 }
 
 .container {
-  width: 100%;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
-.flex-outer,
-.flex-inner {
-  list-style-type: none;
-  padding: 0;
-}
-
-.flex-outer {
-  max-width: 800px;
-  margin: 0 auto;
+ul.flex-outer  {
+  width: 400px;
+  padding: 0px;
 }
 
 .flex-outer li,
@@ -29,7 +23,7 @@ input {
 }
 
 .flex-inner {
-  padding: 8px;
+  padding: 10px;
   justify-content: space-around;
 }
 
@@ -37,15 +31,11 @@ input {
   margin-bottom: 10px;
 }
 
-.flex-outer li label,
-.flex-outer li p {
-  padding: 0px 8px;
-}
-
 .flex-outer > li > label,
 .flex-outer li p {
   flex: 1 0 120px;
   max-width: 220px;
+  padding: 8px;
 }
 
 .flex-outer li input,

@@ -72,12 +72,6 @@ class Animal
     end
   end
 
-  #SET TO ADOPTABLE?? should this be here or within the views?
-  #this is not used currenlty in my erb or view files...
-  def vaccinate
-    @health_check = true
-  end
-
   #ASSIGN NEW OWNER / UPDATE
   def update
     sql = "UPDATE animals

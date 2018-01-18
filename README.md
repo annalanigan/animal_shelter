@@ -41,3 +41,12 @@ To run this web app, you will need:
 - Ruby
 
 ### Installing
+
+- Create a database called animal_shelter
+- Run the database and SQL file
+- Run the app.rb using port: 4567
+- Open the localhost:4567/ in your URL
+
+### Author
+Anna Lanigan
+
